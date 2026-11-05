@@ -490,13 +490,13 @@ could only hypothetically yield an infinite set of solutions.
    analysis and comparison. It gets MUCH harder with coupled physics, so be
    careful.
 
-7. **If You Consider an Initial Condition Far from the Expected Steady State
+6. **If You Consider an Initial Condition Far from the Expected Steady State
    Solution, You May Need to Select a Significantly Smaller Time Step:** When
    the initial condition differs significantly from the expected steady state,
    smaller time steps may be necessary to accurately capture the transient
    behavior and prevent numerical instability.
 
-8. **Be Mindful of Initial Conditions You Select:** Poorly chosen initial
+7. **Be Mindful of Initial Conditions You Select:** Poorly chosen initial
    conditions, especially for interfaces or abrupt changes, can lead to
    numerical artifacts, excessive computational demands, and inaccurate
    results. It's important to select physically meaningful initial conditions
@@ -507,7 +507,7 @@ could only hypothetically yield an infinite set of solutions.
    conditions can stabilize phases that would otherwise be unstable, leading
    to unrealistic outcomes in your simulation.
 
-9. **Using Automatic Time Stepping Integrator Algorithms Can Benefit PF
+8. **Using Automatic Time Stepping Integrator Algorithms Can Benefit PF
    Simulations:** Automatic time stepping algorithms adjust the time step size
    during simulation based on the system's dynamics. This can improve
    simulation efficiency by using larger time steps during stable periods and
