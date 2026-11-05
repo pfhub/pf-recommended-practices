@@ -161,7 +161,12 @@ $$S^{\mathrm{prod}}=\frac{dS}{dt}+\int {\bf J}_s\cdot d{\bf A}\ge0,$$
 
 where ${\bf J}_s$ is the flux of entropy.  We can compute (for an incompressible system)
 
-$$S^{\mathrm{prod}}=\int \left[\sum_i -\left(\frac{\mu_i}{T}\right)^{NC}\frac{D\rho_i}{Dt}+S_\phi\frac{D\phi}{Dt}+\frac{1}{T}\frac{De}{Dt}\right]dV+\int \left[{\bf J}_s-\sum_i \alpha_i^2\nabla\rho_i\frac{D\rho_i}{Dt}-\epsilon^2\nabla\phi\frac{D\phi}{Dt}\right]\cdot d{\bf A},$$
+$$
+\begin{align}
+S^{\mathrm{prod}}&=\int \left[\sum_i -\left(\frac{\mu_i}{T}\right)^{NC}\frac{D\rho_i}{Dt}+S_\phi\frac{D\phi}{Dt}+\frac{1}{T}\frac{De}{Dt}\right]dV \\ 
+&+\int \left[{\bf J}_s-\sum_i \alpha_i^2\nabla\rho_i\frac{D\rho_i}{Dt}-\epsilon^2\nabla\phi\frac{D\phi}{Dt}\right]\cdot d{\bf A},
+\end{align}
+$$
 
 where we have introduced
 
@@ -186,7 +191,12 @@ explicit surface terms from the entropy production. We have also
 introduced the tensor ${\bf Y}$ which is a complicated beast
 and has the form
 
-$$\frac{{\bf Y}}{T}=\frac{\boldsymbol{\sigma}}{T}+\sum \alpha_i^2\nabla\rho_i\otimes\nabla\rho_i+\epsilon^2\nabla\phi\otimes\nabla\phi+\left(\frac{p}{T}-\sum_i \alpha_i^2\rho_i\nabla^2\rho_i-\sum_i\frac{\alpha_i^2}{2}|\nabla\rho_i|^2-\frac{\epsilon^2}{2}|\nabla\phi|^2\right){\bf I},$$
+$$
+\begin{align}
+\frac{{\bf Y}}{T}=\frac{\boldsymbol{\sigma}}{T}&+\sum \alpha_i^2\nabla\rho_i\otimes\nabla\rho_i+\epsilon^2\nabla\phi\otimes\nabla\phi \\
+&+\left(\frac{p}{T}-\sum_i \alpha_i^2\rho_i\nabla^2\rho_i-\sum_i\frac{\alpha_i^2}{2}|\nabla\rho_i|^2-\frac{\epsilon^2}{2}|\nabla\phi|^2\right){\bf I},
+\end{align}
+$$
 
 where $\bf I$ is the identity tensor.
 
@@ -216,7 +226,12 @@ $$\frac{D \rho_i}{D t}=\nabla\cdot M_i\nabla\left(-\frac{\partial s}{\partial \r
 
 $$\frac{D\phi}{Dt}=M_\phi\left(\frac{\partial s}{\partial\phi}+\epsilon^2\nabla^2\phi\right).$$
 
-$$\frac{\boldsymbol{\sigma}}{T}=\frac{\eta}{T}\left(\nabla{\bf v}+(\nabla{\bf v})^T\right)-\sum_i \alpha_i^2\nabla\rho_i\otimes\nabla\rho_i+\epsilon^2\nabla\phi\otimes\nabla\phi-\left(\frac{p}{T}-\sum \alpha_i^2\rho_i\nabla^2\rho_i-\sum\frac{\alpha_i^2}{2}|\nabla\rho_i|^2-\frac{\epsilon^2}{2}|\nabla\phi|^2\right){\bf I},$$
+$$
+\begin{align}
+\frac{\boldsymbol{\sigma}}{T}=\frac{\eta}{T}\left(\nabla{\bf v}+(\nabla{\bf v})^T\right)&-\sum_i \alpha_i^2\nabla\rho_i\otimes\nabla\rho_i+\epsilon^2\nabla\phi\otimes\nabla\phi \\
+&-\left(\frac{p}{T}-\sum \alpha_i^2\rho_i\nabla^2\rho_i-\sum\frac{\alpha_i^2}{2}|\nabla\rho_i|^2-\frac{\epsilon^2}{2}|\nabla\phi|^2\right){\bf I},
+\end{align}
+$$
 
 with
 
@@ -316,7 +331,7 @@ them. A similar expression can be obtained for component B. Note that $g(\phi)$
 has minima at $\phi=0$ and $\phi=1$ with a maximum at $\phi=0.5$ while
 $p(0)=0$, $p(1)=1$ and $p'=0$ when $\phi=0$ or $\phi=1$.  A popular choice for
 these functions is $p(\phi)=\phi^3(10-15\phi+6\phi^2)$ and
-$g(\phi)=\\phi^2(1-\phi)^2$.  Note also the $\partial p/\partial\phi=30g(\phi)$
+$g(\phi)=\phi^2(1-\phi)^2$.  Note also the $\partial p/\partial\phi=30g(\phi)$
 by construction.
 
 #### Step 3
@@ -324,7 +339,12 @@ by construction.
 Form the function, $f(\phi,c,T)$, that represents (for example) a regular
 solution of A and B,
 
-$$f(\phi,c,T)=(1-c)f^A(\phi)+cf^B(\phi) +RT((1-c)\ln(1-c)+c\ln c)+c(1-c)\left[\Omega_S(1-p(\phi))+\Omega_L p(\phi)\right],$$
+$$
+\begin{align}
+f(\phi,c,T)=(1-c)f^A(\phi)&+cf^B(\phi) +RT((1-c)\ln(1-c)+c\ln c) \\
+&+c(1-c)\left[\Omega_S(1-p(\phi))+\Omega_L p(\phi)\right],
+\end{align}
+$$
 
 where $\Omega_L$ and $\Omega_S$ are the regular solution parameters of the
 liquid and solid that again are combined with the interpolating function
@@ -457,7 +477,8 @@ could only hypothetically yield an infinite set of solutions.
    Possible:** Non-dimensionalization involves scaling variables in your
    equations to remove physical units. This can help simplify the equations,
    reduce the number of parameters, and make the problem more amenable to
-   analysis and comparison.
+   analysis and comparison. It gets MUCH harder with coupled physics, so be
+   careful.
 
 6. **If You Consider an Initial Condition Far from the Expected Steady State
    Solution, You May Need to Select a Significantly Smaller Time Step:** When
@@ -489,9 +510,6 @@ selection, proper resolution of length and time scales, and accurate initial
 conditions when performing numerical simulations. Addressing these aspects
 helps ensure the reliability and validity of your simulation results in various
 scientific and engineering applications.
-
-* Non-dimensionalization
-  * It gets MUCH harder with coupled physics, so be careful
 
 ## References
 
