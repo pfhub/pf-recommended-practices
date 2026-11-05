@@ -1,7 +1,7 @@
 (label-software-development)=
 # Software Development
 
-Daniel Schwen ([@dschwen](https://github.com/dschwen)), Jon Guyer ([@guyer](https://github.com/guyer)), Trevor Keller ([@tkphd](https://github.com/tkphd))
+Daniel Schwen ([Daniel Schwen](https://github.com/dschwen)), Jon Guyer ([Jonathan Guyer](https://github.com/guyer)), Trevor Keller ([Trevor Keller](https://github.com/tkphd))
 
 People don't usually arrive at phase field methods from a software development
 background.  This page recommends some approaches to reduce errors and wasted
@@ -85,9 +85,6 @@ code license. Authorship is tracked through the version control system.
 (label-software-license-considerations)=
 #### License considerations
 
-<!-- 
-> [Largely not unique to phase field, or even to scientific computing, so not a lot to say here, but should reference good guidance] -->
-
 * If you do not spell out your license, potential users must assume you are
   granting _no rights_ to copy or reuse it.
 * If your institution stipulates a license, use it.
@@ -132,8 +129,8 @@ version.
 (label-code-verification)=
 ### Code verification
 
-While regression tests only guarantee to maintain the _status quo_, they do not
-guarantee the correctness of the simulation results. _Code verification_ is
+Regression tests only guarantee to maintain the _status quo_, they do not
+inherently guarantee the correctness of the simulation results. _Code verification_ is
 required to ensure the code does what it is designed to do. Several
 verification approaches exist.
 
@@ -148,7 +145,3 @@ verification approaches exist.
 3. Scaling laws. Known scaling laws, such as coarsening rate over time or
    convergence rate as a function of domain discretization, can be tested to
    discover implementation errors.
-
-<!-- ## TODO -->
-
-<!-- - Am I disseminating this software? -->
